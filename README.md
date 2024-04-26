@@ -1,10 +1,8 @@
 # Vertex Color Master for Blender
 
-> __Note:__ This is a fork to support Blender 4.1
-
-> __Warning:__ This addon does not work well from Blender 3.2 upwards due to internal changes in vertex attributes in Blender. I have tried to fix the problems, but have not been able to yet. I may return to the addon in the future in order to fix the bugs or even rewrite it, but I can't make any guarantees due to other commitments. Apologies to anyone who uses the addon and is waiting for a fix.
-
 An add-on for [Blender](https://www.blender.org/) that adds numerous features to assist working with vertex colors.
+
+This is a fork to support Blender 4.1 with patch https://github.com/andyp123/blender_vertex_color_master/pull/43 applied. This addon apparently does not work well from Blender 3.2 upwards due to internal changes in vertex attributes in Blender, however the main workflow of painting vertex colors, and isolate workflow seems to function properly. If there's any issues, bug Francis (francis@pahdolabs.com) about it and she can help look into supporting that feature.
 
 ## Contents
 1. [Installation](#installation)
@@ -18,11 +16,15 @@ An add-on for [Blender](https://www.blender.org/) that adds numerous features to
 
 <a name="installation"></a>
 ## Installation
-__Note:__ This add-on requires [Blender 2.80](https://builder.blender.org/download/) or above. There is an older release compatible with Blender 2.79 available [here](https://github.com/andyp123/blender_vertex_color_master/releases/tag/v0.75).
-1. Download the latest release from GitHub [here](https://github.com/andyp123/blender_vertex_color_master/releases).
-2. In Blender, open the Preferences window (Edit>Preferences) and select the Add-ons tab.
-3. Press the 'Install...' button and select the .zip file you downloaded.
-4. Enable the add-on and save preferences if you want it to always be available.
+
+__Note:__ This add-on requires [Blender 4.1](https://builder.blender.org/download/) or above.
+1. Download the repository
+2. Copy the folder **vertex_color_master** into **%APPDATA%\Blender Foundation\Blender\4.1\scripts\addons**
+3. In Blender, open the Preferences window (Edit>Preferences) and select the Add-ons tab.
+4. Search for "Vertex Color Master" and enable the add-on. Save preferences if you want it to always be available.
+![image](https://github.com/pahdolabs/blender_vertex_color_master/assets/135087242/dcbcd723-7477-4aa6-8154-be6855db4ccb)
+5. Go into the Vertex Paint mode and press N. There should be a "VCM" tab that shows up on the right.
+![image](https://github.com/pahdolabs/blender_vertex_color_master/assets/135087242/e9e0805e-fae4-4fa7-9436-9492126c0bfd)
 
 ---
 
