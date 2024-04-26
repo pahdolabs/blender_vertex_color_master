@@ -78,6 +78,14 @@ classes = (
 # used to unregister bound shortcuts when the addon is disabled / removed
 addon_keymaps = []
 
+# Affect Alpha setting
+# If you're painting RGB values, it will also paint in the alpha. If you accidentally turn it on, it's sad, so we just turn it off when vertex painting.
+def disable_alpha(scene):
+    if bpy.context.active_object and bpy.context.active_object.mode == 'VERTEX_PAINT':
+        brush = bpy.context.tool_settings.vertex_paint.brush
+        if brush:
+            brush.use_alpha = False
+
 def register():
     # fix issue with default brush name changing between 2.80 > 2.81
     if bpy.app.version >= (2, 81, 0):
@@ -105,6 +113,9 @@ def register():
         kmi.active = True
         addon_keymaps.append((km, kmi))
 
+    # Add handlers
+    bpy.app.handlers.depsgraph_update_pre.append(disable_alpha)
+
 def unregister():
     # remove operators
     for c in reversed(classes):
@@ -119,6 +130,10 @@ def unregister():
         for km, kmi in addon_keymaps:
             km.keymap_items.remove(kmi)
         addon_keymaps.clear()
+
+    # Remove handlers
+    if disable_alpha in bpy.app.handlers.depsgraph_update_pre:
+        bpy.app.handlers.depsgraph_update_pre.remove(disable_alpha)
 
 # allows running addon from text editor
 if __name__ == '__main__':

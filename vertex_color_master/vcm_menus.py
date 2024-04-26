@@ -136,6 +136,8 @@ class VERTEXCOLORMASTER_MT_PieMain(Menu):
 
 # Menu functions for drawing sub-panels
 def draw_brush_settings(context, layout, obj, settings, mode='STANDARD', pie=False):
+    # https://docs.blender.org/api/current/bpy.types.VertexPaint.html#bpy.types.VertexPaint
+    # https://docs.blender.org/api/current/bpy.types.Brush.html#bpy.types.Brush
     brush = context.tool_settings.vertex_paint.brush
     col = layout.column()
     row = col.row()
@@ -174,9 +176,12 @@ def draw_brush_settings(context, layout, obj, settings, mode='STANDARD', pie=Fal
     row.operator('vertexcolormaster.edit_brush_settings', text="Blur").blend_mode = 'BLUR'
     row = col.row(align=True)
     row.prop(brush, 'strength', text="Strength")
-    if mode == 'STANDARD':
-        row = col.row(align=True)
-        row.prop(brush, 'use_alpha', text="Affect Alpha")
+
+    # Affect Alpha setting
+    # If you're painting RGB values, it will also paint in the alpha. If you accidentally turn it on, it's sad, so we just remove it.
+    # if mode == 'STANDARD':
+    #     row = col.row(align=True)
+    #     row.prop(brush, 'use_alpha', text="Affect Alpha")
 
 
 def draw_active_channel_operations(context, layout, obj, settings, mode='STANDARD', pie=False):
