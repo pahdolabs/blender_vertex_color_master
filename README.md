@@ -27,6 +27,10 @@ __Note:__ This add-on requires [Blender 4.1](https://builder.blender.org/downloa
 5. Go into the Vertex Paint mode and press N. There should be a "VCM" tab that shows up on the right.
 ![image](https://github.com/pahdolabs/blender_vertex_color_master/assets/135087242/e9e0805e-fae4-4fa7-9436-9492126c0bfd)
 
+If you need to update the plugin, just override the files and you can reload the plugin by going to Blender -> System -> Reload Scripts
+
+![image](https://github.com/pahdolabs/blender_vertex_color_master/assets/135087242/a1b63a72-2a38-45f3-862a-d5289a3bec31)
+
 ---
 
 <a name="usage"></a>
