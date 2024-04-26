@@ -269,7 +269,10 @@ When in isolate mode, the pie menu is slightly different, as shown in the follow
 <a name="dev_notes"></a>
 ## Dev Notes
 Can easily refresh the plugin by Blender -> System -> Reload Scripts
+
 ![image](https://github.com/pahdolabs/blender_vertex_color_master/assets/135087242/a1b63a72-2a38-45f3-862a-d5289a3bec31)
+
 Can debug the plugin by Window -> Toggle System Console and putting print statements
+
 ![image](https://github.com/pahdolabs/blender_vertex_color_master/assets/135087242/62145d09-027d-4799-bf60-2175b5337390)
 
