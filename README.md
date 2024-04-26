@@ -13,6 +13,7 @@ This is a fork to support Blender 4.1 with patch https://github.com/andyp123/ble
 6. [Misc Operations](#misc_operations)
 7. [Pie Menus](#pie_menus)
 8. [Planned / Possible Features](#planned_features)
+9. [Dev Notes](#dev_notes)
 
 <a name="installation"></a>
 ## Installation
@@ -262,4 +263,13 @@ When in isolate mode, the pie menu is slightly different, as shown in the follow
 * Improvements to pie menus.
 * Optimisations to improve speed of masked operations.
 * Optimisations to improve speed in dense mesh.
+
+---
+
+<a name="dev_notes"></a>
+## Dev Notes
+Can easily refresh the plugin by Blender -> System -> Reload Scripts
+![image](https://github.com/pahdolabs/blender_vertex_color_master/assets/135087242/a1b63a72-2a38-45f3-862a-d5289a3bec31)
+Can debug the plugin by Window -> Toggle System Console and putting print statements
+![image](https://github.com/pahdolabs/blender_vertex_color_master/assets/135087242/62145d09-027d-4799-bf60-2175b5337390)
 
